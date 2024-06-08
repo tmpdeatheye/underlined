@@ -1,0 +1,38 @@
+repository: docker.io/percona/percona-postgresql-operator
+image: "docker.io/percona/percona-postgresql-operator:2.3.1-ppg16-postgres-gis" # use postgis extension
+imagePullPolicy: IfNotPresent
+postgresVersion: 16
+port: 5432
+
+users:
+  {{ tpl (readFile "./users/postgres.yaml") . | nindent 2 | trim }}
+
+instances:
+  - name: database
+    replicas: 1
+    resources:
+      requests:
+        cpu: 500m
+        memory: 1.0Gi
+      limits:
+        cpu: 1000m
+        memory: 2.0Gi
+    dataVolumeClaimSpec:
+      storageClassName: ""
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 2Gi
+
+proxy:
+  pgBouncer:
+    replicas: 1
+    resources:
+      requests:
+        cpu: 250m
+        memory: 0.25Gi
+      limits:
+        cpu: 500m
+        memory: 0.5Gi
+    exposeSuperusers: true

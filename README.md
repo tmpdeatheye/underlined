@@ -17,3 +17,10 @@
   + helmfile apply --file ./helmfile.yaml
 
 # components
+**percona**
++ pg-operator:
+  + version: 2.3.5
+  + image: docker.io/percona/percona-postgresql-operator:2.3.1
++ pg-db:
+  + version: 2.3.18
+  + image: docker.io/percona/percona-postgresql-operator:2.3.1-ppg16-postgres-gis

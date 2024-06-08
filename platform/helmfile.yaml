@@ -8,3 +8,6 @@ helmDefaults:
 repositories:
   - name: percona
     url: https://percona.github.io/percona-helm-charts
+
+helmfiles:
+  - path: perconapg/helmfile.yaml

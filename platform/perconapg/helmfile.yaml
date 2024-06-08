@@ -1,0 +1,16 @@
+releases:
+  - name: pg-operator
+    namespace: perconapg
+    chart: percona/pg-operator
+    version: 2.3.5
+    values:
+      - ./pg-operator/values.yaml.gotmpl
+      - fullnameOverride: pg-operator
+
+  - name: pg-db-metasvc
+    namespace: perconapg
+    chart: percona/pg-db
+    version: 2.3.18
+    values:
+      - ./pg-db/metasvc/values.yaml.gotmpl
+      - fullnameOverride: pg-db-metasvc
