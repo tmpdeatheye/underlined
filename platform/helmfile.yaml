@@ -4,3 +4,7 @@ helmDefaults:
   verify: true
   createNamespace: true
   timeout: 600
+
+repositories:
+  - name: percona
+    url: https://percona.github.io/percona-helm-charts
