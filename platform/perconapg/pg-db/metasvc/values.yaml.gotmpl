@@ -6,6 +6,7 @@ port: 5432
 
 users:
   {{ tpl (readFile "./users/postgres.yaml") . | nindent 2 | trim }}
+  {{ tpl (readFile "./users/keycloak.yaml") . | nindent 2 | trim }}
 
 instances:
   - name: database
