@@ -1,0 +1,24 @@
+releases:
+  - name: commons-operator
+    namespace: stackable
+    chart: stackable/commons-operator
+    version: 24.3.0
+    values:
+      - ./base/commons-operator.yaml.gotmpl
+      - fullnameOverride: commons-operator
+
+  - name: listener-operator
+    namespace: stackable
+    chart: stackable/listener-operator
+    version: 24.3.0
+    values:
+      - ./base/listener-operator.yaml.gotmpl
+      - fullnameOverride: listener-operator
+
+  - name: secret-operator
+    namespace: stackable
+    chart: stackable/secret-operator
+    version: 24.3.0
+    values:
+      - ./base/secret-operator.yaml.gotmpl
+      - fullnameOverride: secret-operator

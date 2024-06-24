@@ -14,6 +14,7 @@
 + in the platform folder:
   + kubectl apply --server-side -k ./
   + helmfile init --file ./helmfile.yaml
+  + helmfile repos --file ./helmfile.yaml
   + helmfile apply --file ./helmfile.yaml
 
 # components

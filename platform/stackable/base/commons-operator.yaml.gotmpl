@@ -1,0 +1,17 @@
+image:
+  repository: docker.stackable.tech/stackable/commons-operator
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: true
+
+labels:
+  stackable.tech/vendor: Stackable
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 1024Mi
+  requests:
+    cpu: 200m
+    memory: 1024Mi

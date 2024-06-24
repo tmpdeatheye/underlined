@@ -2,4 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   # percona-postgresql-operator crds
-  - https://raw.githubusercontent.com/percona/percona-postgresql-operator/v2.3.1/deploy/crd.yaml
+  #  - https://raw.githubusercontent.com/percona/percona-postgresql-operator/v2.3.1/deploy/crd.yaml
+  # stackable crds
+  - https://raw.githubusercontent.com/stackabletech/commons-operator/24.3.0/deploy/helm/commons-operator/crds/crds.yaml
+  - https://raw.githubusercontent.com/stackabletech/listener-operator/24.3.0/deploy/helm/listener-operator/crds/crds.yaml
+  - https://raw.githubusercontent.com/stackabletech/secret-operator/24.3.0/deploy/helm/secret-operator/crds/crds.yaml
+  # trino operator crds
+  - https://raw.githubusercontent.com/stackabletech/trino-operator/24.3.0/deploy/helm/trino-operator/crds/crds.yaml
