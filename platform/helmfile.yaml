@@ -6,14 +6,8 @@ helmDefaults:
   timeout: 600
 
 repositories:
-  #  - name: percona
-  #    url: https://percona.github.io/percona-helm-charts
-  #  - name: bitnami
-  #    url: https://charts.bitnami.com/bitnami
-  - name: stackable
-    url: https://repo.stackable.tech/repository/helm-stable
+  - name: percona
+    url: https://percona.github.io/percona-helm-charts
 
 helmfiles:
-  #  - path: perconapg/helmfile.yaml
-  - path: ./stackable/helmfile.yaml
-  - path: ./trino/helmfile.yaml
+  - path: perconapg/helmfile.yaml

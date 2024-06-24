@@ -1,7 +1,0 @@
-- name: keycloak
-  databases:
-    - keycloak
-  options: SUPERUSER
-  password:
-    type: ASCII
-  secretName: pg-db-metasvc-pguser-keycloak

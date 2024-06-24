@@ -1,8 +1,0 @@
-releases:
-  - name: trino-operator
-    namespace: trino
-    chart: stackable/trino-operator
-    version: 24.3.0
-    values:
-      - ./trino-operator/trino-operator.yaml.gotmpl
-      - fullnameOverride: trino-operator
