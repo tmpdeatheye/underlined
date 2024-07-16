@@ -1,0 +1,10 @@
+releases:
+  - name: trino
+    namespace: trino
+    chart: trino/trino
+    version: 0.25.0
+    values:
+      - ./trino/common.yaml.gotmpl
+      - ./trino/server.yaml.gotmpl
+      - ./trino/coordinator.yaml.gotmpl
+      - ./trino/worker.yaml.gotmpl
